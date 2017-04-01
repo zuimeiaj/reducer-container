@@ -31,6 +31,7 @@ class Reducer extends ReducerContainer {
     }
     
     // 返回promise  在resolve或者 reject 后更新状态，前提是传入的参数必须是immtuable.Map 对象
+    //
     updateWithPromise(click) {
         return new Promise((resolve, reject) => {
             setTimeout(

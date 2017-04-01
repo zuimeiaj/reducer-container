@@ -10,7 +10,11 @@ function ReducerContainer(){
         unneedUpdatePrefix: "_"
     }
 }
-
+/**
+ *
+ * @param store
+ * @param uniqueKey
+ */
 ReducerContainer.prototype.initialize=function(store, uniqueKey) {
     this.globalStore = store;
     this.uniqueKey   = uniqueKey;
@@ -18,7 +22,10 @@ ReducerContainer.prototype.initialize=function(store, uniqueKey) {
         this.extendsMethods();
     }
 }
-
+/**
+ * 初始化component store
+ * @returns {immutable.Map}
+ */
 ReducerContainer.prototype.initialState=function() {
     return immutable.fromJS(this.store);
 }
@@ -53,7 +60,9 @@ ReducerContainer.prototype.performUpdate=function(state, action) {
     }
     return state;
 }
-
+/**
+ * 返回当前component的store
+ */
 ReducerContainer.prototype.getState=function() {
     return this.globalStore.getState()[this.uniqueKey];
 }
@@ -61,7 +70,17 @@ ReducerContainer.prototype.getState=function() {
 ReducerContainer.prototype.getValue=function(key) {
     return this.getState().get(key);
 }
-
+/**
+ *
+ * @param pathArray {Array} see immutable.Map#getIn
+ * @returns {T|any|*}
+ */
+ReducerContainer.prototype.getIn=function (pathArray) {
+    return this.getState().getIn(pathArray);
+}
+/**
+ * 拦截派生类所有的函数
+ */
 ReducerContainer.prototype.extendsMethods=function() {
     let methods   = Object.getOwnPropertyNames(Object.getPrototypeOf(this));
     for (let i = 0; i < methods.length; i++) {
