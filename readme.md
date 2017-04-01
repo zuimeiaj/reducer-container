@@ -53,7 +53,7 @@ export default new Reducer();
 ```
 
 >Componet
-```
+````javascript
 
 import React from "react";
 import reducer from "./reducer";
