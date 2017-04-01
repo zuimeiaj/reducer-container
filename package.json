@@ -1,0 +1,14 @@
+{
+  "name": "reducer-container",
+  "version": "1.0.12",
+  "description": "解决redux代码常量冗余问题,提供更新状态接口规范",
+  "main": "index.js",
+  "dependencies": {
+    "immutable": "^3.8.1"
+  },
+  "keywords": [
+    "redux-reducer"
+  ],
+  "author": "zuimeiaj",
+  "license": "ISC"
+}
