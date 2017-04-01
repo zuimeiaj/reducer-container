@@ -5,9 +5,10 @@
 >reducer,所有的reducer都必须继承ReducerContainer
 ```javascript
 "use strict";
-const {ReducerContainer} =require("../index")
+const ReducerContainer =require("../index")
 const immutable = require('immutable');
-// 基本使用方法，自定义reudcer需要继承自ReducerContainer
+// example:
+// 基本使用方法，自定义reudcer需要继承ReducerContainer
 // 可以使用三种方式来更新视图
 // 1.直接调用update函数
 // 2.直接返回一个新的状态
