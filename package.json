@@ -9,6 +9,9 @@
   "keywords": [
     "redux-reducer"
   ],
+  "repository":{
+    "url": ""
+  },
   "author": "zuimeiaj",
   "license": "ISC"
 }
