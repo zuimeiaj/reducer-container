@@ -1,16 +1,17 @@
 {
   "name": "reducer-container",
-  "version": "1.0.12",
+  "version": "1.0.18",
   "description": "解决redux代码常量冗余问题,提供更新状态接口规范",
   "main": "index.js",
   "dependencies": {
-    "immutable": "^3.8.1"
+    "immutable": "^3.8.1",
+    "webpack": "^2.5.1"
   },
   "keywords": [
     "redux-reducer"
   ],
-  "repository":{
-    "url": ""
+  "repository": {
+    "url": "https://github.com/zuimeiaj/reducer-container"
   },
   "author": "zuimeiaj",
   "license": "ISC"
